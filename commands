@@ -1,0 +1,5 @@
+para Windows con CMD no PowerShell
+docker run  -d --name bind9 --restart always -p 53:53 -p 53:53/udp -v "%CD%\bind\:/etc/bind/" -v "%CD%\bind\zones:/etc/bind/zones" resystit/bind9:latest
+
+para linux
+docker run  -d --name bind9 --restart always -p 53:53 -p 53:53/udp -v "$PWD/bind/:/etc/bind/" -v "$PWD/bind/zones:/etc/bind/zones" resystit/bind9:latest

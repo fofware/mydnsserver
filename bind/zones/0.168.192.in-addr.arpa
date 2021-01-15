@@ -1,0 +1,19 @@
+;
+; 192.168.0.0/24 Reverse Zone File
+;
+$ORIGIN .
+$TTL 604800
+0.168.192.IN-ADDR.ARPA IN  SOA datasrv.firulais.net.ar. postmaster.firulais.net.ar. (
+            2021011301  ; serial
+            3600        ; refresh
+            180         ; retry
+            604800      ; expire
+            3600        ; negative cache ttl
+            )
+;
+        NS1  datasrv.firulais.net.ar.
+        NS2  win.firulais.net.ar.
+;
+$ORIGIN 0.168.192.in-addr.arpa.
+2    IN  PTR datasrv.firulais.net.ar.
+3    IN  PTR win.firulais.net.ar.

@@ -1,0 +1,17 @@
+$TTL 1h
+$ORIGIN firulais.net.ar.
+@ IN SOA datasrv.firulais.net.ar. hostmaster.firulais.net.ar. (
+         2021011301  ; serial
+         15m         ; slaves should check back with us every 15min
+         20          ; slaves should retry (on failure) after 20sec
+         4h          ; slaves stop being authoritative after 4hr without updates
+         1h          ; other NSes should cache our results for 1h
+       )
+            IN NS datasrv.firulais.net.ar.
+            IN NS win.firulais.net.ar.
+            IN A  192.168.0.2; datasrv
+datasrv     IN A  192.168.0.2
+win         IN A  192.168.0.3
+www         IN CNAME datasrv.firulais.net.ar.
+admin       IN CNAME win.firulais.net.ar.
+images      IN CNAME datasrv.firulais.net.ar.
